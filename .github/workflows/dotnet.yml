@@ -17,7 +17,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore src/DotnetDeploy.Api
     - name: Build
-      run: dotnet publish src/DotnetDeploy.Api --no-restore    
+      run: dotnet publish src/DotnetDeploy.Api --no-restore -c Release
     - name: Install zip
       uses: montudor/action-zip@v1
     - name: Zip output
