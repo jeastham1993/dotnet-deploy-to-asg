@@ -21,7 +21,7 @@ jobs:
     - name: Install zip
       uses: montudor/action-zip@v1
     - name: Zip output
-      run: zip -qq -r output.zip bin/release/net6.0    
+      run: zip -qq -r output.zip src/DotnetDeploy.Api/bin/Release/net6.0/publish
     - name: Upload to S3 
       uses: jakejarvis/s3-sync-action@master
       with:
