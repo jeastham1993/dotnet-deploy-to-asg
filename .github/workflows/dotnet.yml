@@ -28,4 +28,4 @@ jobs:
     - name: Zip output
       run: zip -qq -r output.zip src/DotnetDeploy.Api/bin/Release/net6.0/publish
     - name: Upload Artifact to s3
-      run: aws s3 cp src/DotnetDeploy.Api/bin/Release/net6.0/publish/*.zip s3://${{ secrets.AWS_S3_BUCKET }}/
+      run: aws s3 cp *.zip s3://${{ secrets.AWS_S3_BUCKET }}/
